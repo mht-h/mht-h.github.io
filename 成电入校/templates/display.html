@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        #hello{  position: absolute;
+                top: 120px;
+                left:30px;}
+        #link-top {
+            position: absolute;
+            width: 99%;
+            height: 1px;
+            top:300px;
+            border-top: solid #cccccc 1px;
+        }
+        #name{
+            position: absolute;
+            height: 40px;
+            weight:100%;
+            margin-top:320px;
+            left:30px;
+            display:flex
+            }
+        #type{
+            position: absolute;
+            height: 40px;
+            weight:100%;
+            margin-top:430px;
+            left:30px;
+            display:flex
+        }
+        #time{
+            position: absolute;
+            height: 40px;
+            weight:100%;
+            margin-top:540px;
+            left:35px;
+            display:flex
+            }
+        #two{
+            position: absolute;
+            top:700px;
+            left:350px;
+            width:300px;
+            height:80px;
+            border:1px solid #55c2a5;
+            border-radius:3%;
+            background-color:#55c2a5;
+            display:flex;
+            box-shadow:gray 2px 2px 5px 1px
+        }
+        #img{
+            position: absolute;
+            top:850px;
+            left:430px;
+            weight:100px;
+            height:100px
+        }
+        #bg{
+            position: absolute;
+            top:1010px;
+            weight:1000px;
+            height:900px;
+        }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <title>平安成电智慧通行</title>
+</head>
+<body>
+    <div id="hello">
+        <text style="color:#008000;font-size:60px;font-weight:800">研究生用户，{{msg}}</text>
+    </div>
+    <div id="link-top"></div>
+    <div id="name">
+        <img src="{{url_for('static',filename='images/name.png')}}" style="height:160%;">
+        <text style="position:absolute;color:#222222;font-size:37px;font-weight:200;padding-left:90px;margin-top:5px">用户姓名</text>
+        <text style="position:relative;color:#222222;font-size:56px;font-weight:600;padding-left:720px;align-self:center">
+            {{name}}</text>
+    </div>
+    <div id="type">
+        <img src="{{url_for('static',filename='images/type.png')}}" style="height:160%;">
+        <text style="position:absolute;color:#222222;font-size:37px;font-weight:200;padding-left:90px;margin-top:5px">登记类型</text>
+        <text style="position:relative;color:#222222;font-size:56px;font-weight:600;padding-left:450px;top:3px;align-self:center">研究生（硕士）</text>
+    </div>
+    <div id="time">
+        <img src="{{url_for('static',filename='images/time.png')}}" style="height:160%;">
+        <text style="position:absolute;color:#222222;font-size:37px;font-weight:200;margin-left:85px;margin-top:5px">登记时间</text>
+        <marquee scrolldelay="60" scrollamount="3" style="position:relative;margin-left:440px;top:10px;align-self:center" width='400'><span style="font-weight: bolder;font-size: 46px;color:#00c4a4;;font-family:'Arial'">{{time}}&emsp;{{time}}&emsp;{{time}}&emsp;{{time}}&emsp;{{time}}</span></marquee>
+    </div>
+    <div id="two">
+        <text style="margin-left:35px;align-self:center;color:white;font-size:34px;font-weight:100px">前往个人二维码</text>
+    </div>
+    <div id="img">
+        <img src="{{url_for('static',filename='images/xiaohui.png')}}" style="height:140%;">
+    </div>
+    <div id="bg">
+        <img src="{{url_for('static',filename='images/bg.png')}}" style="height:140%;">
+    </div>
+</body>
+</html>
